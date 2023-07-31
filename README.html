@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Staff Application</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <a class="navbar-brand" href="#">
+            Staff Application
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-light">
+      <h1 class="mb-3">Staff Application</h1>
+      <h4 class="mb-3">Application Center</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Application Name</th>
+            <th scope="col">Application Description</th>
+            <th scope="col">Minimum Rank</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">MR</th>
+            <td>MR Applications</td>
+            <td>Apply for MR position</td>
+            <td>Trainee Barista+</td>
+            <td>
+              <a class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal"
+                onclick="startApplication('MR')" role="button">Start</a>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">HR</th>
+            <td>HR Applications</td>
+            <td>Apply for HR position</td>
+            <td>Trainee Barista+</td>
+            <td>
+              <a class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal"
+                onclick="startApplication('HR')" role="button">Start</a>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">SHR</th>
+            <td>SHR Applications</td>
+            <td>Apply for SHR position</td>
+            <td>Trainee Barista+</td>
+            <td>
+              <a class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal"
+                onclick="startApplication('SHR')" role="button">Start</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Jumbotron -->
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="rankTitle">Application Questions</h5>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="stage1">
+            <div class="form-outline">
+              <input type="text" id="username" class=" question form-control" />
+              <label class="form-label" for="form1">What is your Roblox Username?</label>
+            </div>
+            <div class="form-outline" style="margin-top: 30px;">
+              <input type="text" id="discordUsername" class="question form-control" />
+              <label class="form-label" for="form1">What is your Discord Username?</label>
+            </div>
+            <div class="form-outline" style="margin-top: 30px;">
+              <input type="text" id="rank" class="question form-control" />
+              <label class="form-label" for="form1">What is your Rank?</label>
+            </div>
+            <div class="form-outline" style="margin-top: 30px;">
+              <input type="text" class="question form-control" />
+              <label class="form-label" for="form1">Why do you want to apply for MR/HR/SHR (depends on which one
+                they applied)?</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-mdb-dismiss="modal">Cancel</button>
+            <button type="button" id="submitbutton" onclick="submitApplication()" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function submitApplication() {
+        // Process the form data here
+
+        // Rickroll the user
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      }
+    </script>
+  </header>
+
+</html>
